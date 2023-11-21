@@ -1,0 +1,581 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit; /* чтоб не было синего цвета у ссылок */
+}
+
+.header{
+    background-image: url(../images/header-bg.jpg);
+    min-height: 793px;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: top center ;
+}
+
+.container{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header__top{
+    display: flex; /* дклим контент на блоки */
+    justify-content: space-between;/* блоки расставляем по разным краям страницы */
+    height: 100px;
+    align-items: center; /*центрируем относительно горизонтальной оси*/
+}
+
+.menu__list{
+    display: flex;
+}
+
+.menu__list li + li{ /*чтоб применялось ко всем кроме первого поэтомут+li */
+    padding-left: 50px;
+}
+
+.login{
+    margin-right: 44px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.menu__list a{
+    opacity: 0.5; /* прозрачность */
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;  /* заглавные */
+    transition: all .5s;
+}
+
+.menu__list a:hover{
+    opacity: 1;
+}
+
+.sign-up{
+    text-transform: uppercase;
+    color: #250F8A;
+    background-color: #FFFFFF;
+    font-weight: 600;
+    border-radius: 20px; /* скругление */
+    padding: 8px 43px;
+
+}
+
+.header-slider {
+    padding-top: 111px; /* отступ сверху */
+}
+
+
+.header-slider__item-content {
+    display: flex; /* разделить на блоки */
+    justify-content: space-between; /* растянуть блоки по углам*/
+}
+.header-slider__item-info {
+    max-width: 506px; /* максимальная ширина */
+    color: #FFFFFF;
+}
+.header-slider__title {
+    font-weight: 700; /* вид шрифта */
+    font-size: 45px;
+    line-height: 60px; /* высота строки */
+    margin-bottom: 10px; /* отступ от верхнего блока к нижнему */
+}
+.header-slider__description {
+    font-size: 24px;
+    line-height: 55px;
+    margin-bottom: 60px;
+}
+.header-slider__btn {
+    text-transform: uppercase;
+    color: #250F8A;
+    font-weight: 600;
+    padding: 13px 39px; /* отсуп букв от границы кнопки */
+    background-color: #FFCA00;
+    border-radius: 25px;
+}
+.header-slider__item-images {
+    margin-right: 82px; /* отступ справа */
+    margin-top: 10px; /* отсуп сверху */
+}
+
+.header-dots{
+    list-style: none; /* убираю черные точки списка */
+    position: absolute;
+    right: 0; /* отсутп справа 0 */
+    top: 50%; /* наверх на 50% */
+    transform: translateY(-50%); /* чтоб он был всегда по центру */
+}
+
+.header-dots button{
+    border: none; /* убираю рамку с кнопок */
+    background-color: #fff;
+    opacity: 0.5; /* прозрачность */
+    font-size: 0; /* чтоб убрать шрифт */
+    padding: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 3.5px; /* скругление */
+    cursor: pointer; /* не стрелка курсор, а рука курсор*/
+    outline: none;
+    margin: 10px auto; /* расстояние между блоками */
+    display: block;
+}
+
+.header-dots .slick-active button{
+    width: 15px;
+    opacity: 1;
+}
+
+.specialised {
+    padding: 55px 0 93px; /* отступ сверху и снизу в основном блоке */
+    background-image: url(../images/Special-bg.svg); /* вставляем карьтинку слева на фон */
+    background-position: left bottom; /* размещаем фоновую картинку слева внизу */
+    background-repeat: no-repeat; /* тчоб не повторялся */
+    color: #202020;
+    text-align: center; /* по центру блока */
+
+}
+.specialised__title {
+    margin: 96px;
+}
+.title {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 45px; 
+    text-align: center; /* по центру блока */
+}
+.specialised__items {
+    display: flex;
+    justify-content: space-between;
+    max-width: 980px;
+    margin: 0 auto; /* центрируем блоки */
+}
+.specialised__item {
+    width: 280px;
+}
+.specialised__item-img {
+    margin-bottom: 23px; 
+    min-height: 159px;
+}
+.specialised__item-title {
+    margin-bottom: 11px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+.specialised__item-text {
+    padding: 0 10px;
+    color: #272727;
+    opacity: 0.7;
+}
+
+.advantages {
+    padding-top: 64px; /* отступ сверху */
+    background-color: #F4F9FD;  /* цвет фона*/
+    background-image: url(../images/advantages-bg.png); /* вешаем картинку справа на фон*/
+    background-repeat: no-repeat; /* указываем чтоб картинка не повторялась*/
+    background-position: center right; /* размещаем по центру справа*/
+}
+
+.advantages-box {
+    display: flex; /* разделить на блоки */
+    justify-content: space-between; /* растянуть блоки по углам*/
+    padding-bottom: 76px; /* отступ вниз к следующему блоку*/
+}
+
+.advantages-box--right .advantages-box__info{
+    order: 1;
+    background-image: url(../images/title-bg-2.svg);/* вставляем пятно на фон заголовка */
+    background-position: 22px 130px; /* выставил позицию пятна */
+}
+.advantages-box__info {
+    max-width: 456px; /* максимальная ширина блока */
+    padding-top: 60px;
+    background-image: url(../images/title-bg-1.svg);/* вставляем пятно на фон заголовка */
+    background-repeat: no-repeat;
+    background-position: 22px 76px; /* выставил позицию пятна */
+}
+
+.advantages-box__info--bg{
+    background-image: url(../images/title-bg-3.svg);
+    background-position: 5px 105px;
+}
+.advantages-box__title {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 45px;
+    color: #202020;
+    padding: 68px 0 15px 48px;
+}
+.advantages-box__text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #272727;
+    padding-left: 48px;
+}
+
+.advantages-box__text p{
+    margin: 12px 0; /* отусп сверху и снизу от каждого параграфа*/
+}
+
+
+.reviews {
+    background-image: url(../images/reviews-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover; /* для адаптивв на мобильном приложении чтоб норм отображалось*/
+    padding: 38px 0 82px;
+}
+.reviews__title{
+    color: #FFFFFF;
+    margin: 0 auto 48px; /* margin: 0 auto - для того чтоб центрировать блоки  с фиксированной шириной */
+    max-width: 384px;
+}
+
+
+.reviews__items{
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.reviews__item {
+    width: 300px;
+    border-radius: 5px; 
+    background-color: rgba(255,255,255,.2);/* делает прозрачные квадратики, сам фон, а не всю наполняемость */
+    color: #fff;
+    padding: 35px 20px;
+   
+
+}   
+
+ .reviews__item-head {
+    margin-bottom: 13px;
+    display: flex;
+}
+
+.reviews__item-head img {
+    border-radius: 50%; /* убрали белые края с фотографий */
+    margin-right: 20px;
+} 
+
+
+.reviews__item-name {
+    font-weight: 600;
+}
+
+.reviews__item-position {
+    opacity: 0.5;
+}
+
+.reviews__item-text {
+    text-align: center;
+    padding-top: 39px;
+    position: relative;
+}
+
+.reviews__item-text::before {
+    content: "“";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 55px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+} 
+
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    color: #272727;
+    padding: 20px 40px 17px;
+}
+.footer__link a + a{ /* почему а+а это значит чтоб марджин не применялся к певой а, а начинал сразу со второй */
+    margin-left: 20px;
+}
+
+
+
+
+
+
+@media(max-width: 1620px){
+    .advantages{
+        background-image: none;
+    }
+}
+
+
+@media(max-width: 1201px){
+    .specialised {
+        background-size: 60px;
+    }
+}
+
+@media(max-width: 1190px){
+    .header-slider__item-images{
+        margin: 50px 20px 0 0;
+    }
+    .header-slider__item-images img{
+        width: 80%;
+    }
+    .header-slider__item-info{
+        padding: 50px 0;
+    }
+    .header-slider{
+        padding-top: 25px;
+    }
+    .advantages-box__images img {
+        width: 80%;
+    }
+    .advantages-box{
+        justify-content: space-around;
+    }
+    .advantages-box__images{
+        text-align: center;
+    }
+    .advantages-box--right  .advantages-box__title {
+        padding: 30px 0 15px 20px;
+    } 
+    .advantages-box--right .advantages-box__text{
+        padding-left: 20px;
+    }   
+    .advantages-box--right .advantages-box__info{
+        padding-right: 30px;
+    }
+}
+
+@media(max-width: 1080px){
+    .specialised {
+        background-image: none;
+    }
+    .advantages-box__info {
+        padding-top: 10px;
+    }
+    .advantages-box--right .advantages-box__info{
+        padding-right: 10px;
+    }
+    .advantages-box__images img {
+        width: 71%;
+        margin-top: 40px;
+    }
+    .reviews__items{
+        flex-wrap: wrap;
+    }
+    .reviews__item{
+        width: 48%;
+        margin-bottom: 25px;
+    }
+}
+
+@media(max-width: 924px){
+    .header__top{
+        flex-wrap: wrap; /* если элементы не помещаются, будут переноситься вниз на новую строчку */
+    }
+    .header-btn{
+        width: 100%;
+        text-align: right;
+    }
+    .login{
+        margin-right: 30px;
+    }
+}
+
+@media(max-width: 900px){
+    .header-slider__item-images{
+        display: none;
+    }
+}
+
+@media(max-width: 858px){
+    .advantages-box__info{
+        max-width: 100%;
+    }
+    .advantages-box{
+        flex-wrap: wrap; /* перекидывать блок вниз когда доходим до этой ширины */
+        padding-bottom: 7px
+    }
+    .advantages-box--right .advantages-box__info {
+        order: 0; /* меняем местами картинку и текст */
+    }    
+    .advantages{
+        padding-top: 0;
+    }
+    .advantages-box__images img {
+        width: 100%;
+    }
+}
+
+@media(max-width: 775px){
+    .specialised{
+        padding: 20px 0 40px;
+    }
+    .specialised__title {
+        margin-bottom: 40px;/* внутренний оступ снизу */
+    }
+    .specialised__items{
+        flex-wrap: wrap; /* перекидывать блок вниз когда доходим до этой ширины */
+    }
+    .specialised__item{
+        width: 50%; /* ширина */
+        margin-bottom: 20px; /* внутренний отсуп вниз между блоками*/
+    }
+    
+}
+
+@media(max-width: 685px){
+    .reviews__items{
+        display: block;
+    }
+    .reviews__item{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .reviews{
+        padding: 38px 0;
+    }
+}
+/* */
+
+@media(max-width: 620px){
+    .footer__inner{
+        display: block;
+        text-align: center;
+        padding: 20px 10px 17px;
+    }
+    .footer__link{
+        margin-bottom: 10px;
+    }
+}
+
+/* меню бургер */
+@media(max-width: 570px){
+     .menu__list{
+        display: none;
+        position: absolute;
+        top: 120px; /* высота */
+        left: 0; 
+        text-align: center;
+        width: 100%; /* ширина */
+        background-color: #1a50a8;
+        z-index: 5; /* чтоб всплывающий бургер накладывался поверх слайдера */
+    }
+    .menu__list li + li {
+        padding-left: 0px;
+    }
+    .menu__list a{
+        display: block; /* сделал блоки */
+        padding: 10px 0; /* рассширил растояние между друг другом */
+    }
+    .menu__btn{
+        width: 30px;
+        height: 20px;
+        position: relative;
+    }
+    .menu__btn span{ /* добавляем среднюю полоску в бургере */
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        top: 9px;
+        position: absolute;
+    }
+    .menu__btn::after,
+    .menu__btn::before{
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+    }
+    .menu__btn::after{
+        top: 0;
+    }
+    .menu__btn::before{
+        bottom: 0;
+    }
+
+    .header-slider__item-info {
+        padding: 10px 30px 10px 0;
+    }
+    .header{
+        min-height: 580px;
+    }
+    .header-slider__description{
+        margin: 20px;
+        font-size: 20px;
+        line-height: 35px; /* высота строки */
+    }
+    .header-slider__title {
+        font-size: 35px;
+        line-height: 45px;
+    } 
+    
+    .specialised__items{
+        display: block;
+    }
+    .specialised__item{
+        width: 100%; /* ширина */
+    }
+    .title{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .advantages-box__title {
+        font-size: 30px;
+        line-height: 40px;
+        padding: 68px 0 15px 0px;
+    }
+    .advantages-box__text{
+        padding-left: 0;
+    } 
+    .advantages-box--right .advantages-box__title {
+        padding: 30px 0 15px 0px;
+    }
+    .advantages-box--right .advantages-box__text {
+        padding-left: 0px;
+    }
+    .specialised__title {
+        margin: 30px;
+    }
+}    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 570px){
+    .menu__list{
+        display: flex !important;  /* самая высокая степень приоритетности*/
+    }
+}
